@@ -79,13 +79,13 @@ export class UALJsDom {
 
     this.containerElement.appendChild(lightTippyStylesheet as HTMLElement)
 
-    const button = this.createButton()
-    const buttonStyles = this.createButtonStyles(this.buttonStyleOverride)
+    // const button = this.createButton()
+    // const buttonStyles = this.createButtonStyles(this.buttonStyleOverride)
 
-    this.containerElement.appendChild(buttonStyles)
-    this.containerElement.appendChild(button)
+    // this.containerElement.appendChild(buttonStyles)
+    // this.containerElement.appendChild(button)
 
-    this.attachLoginButtonWatcher()
+    // this.attachLoginButtonWatcher()
 
     const authenticationModalStyles = this.createAuthenticatorModalStyles()
     this.authenticatorModal = this.createAuthenticatorModal()
@@ -110,10 +110,10 @@ export class UALJsDom {
     // so if state change occurs they redraw
     this.startRefreshAuthenticatorsTimeout()
 
-    if (this.buttonStyleOverride) {
-      const styleStr = typeof this.buttonStyleOverride === 'boolean' ? '' : this.buttonStyleOverride.toString()
-      this.containerElement.appendChild(this.createButtonStyles(styleStr))
-    }
+    // if (this.buttonStyleOverride) {
+    //   const styleStr = typeof this.buttonStyleOverride === 'boolean' ? '' : this.buttonStyleOverride.toString()
+    //   this.containerElement.appendChild(this.createButtonStyles(styleStr))
+    // }
   }
 
   /**
@@ -375,13 +375,13 @@ export class UALJsDom {
   /**
    * Adds login button watcher for displaying the auth modal
    */
-  private attachLoginButtonWatcher(): void {
-    const button = document.getElementById('ual-button')
+  // private attachLoginButtonWatcher(): void {
+  //   const button = document.getElementById('ual-button')
 
-    button!.addEventListener('click', async () => {
-      this.showAuthModal()
-    })
-  }
+  //   button!.addEventListener('click', async () => {
+  //     this.showAuthModal()
+  //   })
+  // }
 
   /**
    * Renders the Modal to contain auth continue buttons
@@ -457,48 +457,48 @@ export class UALJsDom {
   /**
    * Renders the Auth start button
    */
-  public createButton(): HTMLButtonElement {
-    const button = document.createElement('button')
-    button.id = 'ual-button'
-    button.className = 'ual-button-gen' // TODO: determine if this is needed
-    button.innerHTML = 'UAL Login'
+  // public createButton(): HTMLButtonElement {
+  //   const button = document.createElement('button')
+  //   button.id = 'ual-button'
+  //   button.className = 'ual-button-gen' // TODO: determine if this is needed
+  //   button.innerHTML = 'UAL Login'
 
-    return button
-  }
+  //   return button
+  // }
 
   /**
    * Generates the CSS styles for the Auth start button
    *
    * @param css Optional css override for user provided button styles
    */
-  public createButtonStyles(css: string | boolean): HTMLStyleElement {
+  // public createButtonStyles(css: string | boolean): HTMLStyleElement {
 
-    const buttonStyles = document.createElement('style')
-    const cssStyles = css || `
-      #ual-button {
-        font-family: "Proxima Nova",sans-serif;
-        color: white;
-        text-align: center;
-        background-color: #d8dee5;
-        border-radius: 6px;
-        font-size: 1em;
-        font-weight: bold;
-        background-color: rgb(25,50,112);
-        cursor: pointer;
-        width: 225px;
-        padding: 10px 0px;
-      }
+  //   const buttonStyles = document.createElement('style')
+  //   const cssStyles = css || `
+  //     #ual-button {
+  //       font-family: "Proxima Nova",sans-serif;
+  //       color: white;
+  //       text-align: center;
+  //       background-color: #d8dee5;
+  //       border-radius: 6px;
+  //       font-size: 1em;
+  //       font-weight: bold;
+  //       background-color: rgb(25,50,112);
+  //       cursor: pointer;
+  //       width: 225px;
+  //       padding: 10px 0px;
+  //     }
 
-      @media only screen and (max-width: 480px) {
-        #ual-button {
-          width: calc(100% - 60px);
-        }
-      }
-    `
+  //     @media only screen and (max-width: 480px) {
+  //       #ual-button {
+  //         width: calc(100% - 60px);
+  //       }
+  //     }
+  //   `
 
-    buttonStyles.innerHTML = cssStyles as string
-    return buttonStyles
-  }
+  //   buttonStyles.innerHTML = cssStyles as string
+  //   return buttonStyles
+  // }
 
   /**
    * Generates the CSS styles for the Auth Modal

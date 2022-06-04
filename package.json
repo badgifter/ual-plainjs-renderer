@@ -19,7 +19,8 @@
   "scripts": {
     "build": "rm -rf dist && tsc --build tsconfig.json",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
-    "test": "jest",
+    "test": "echo \"No test specified\"",
+    "tjest":"jest",
     "prepare": "yarn build"
   },
   "dependencies": {
