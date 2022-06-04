@@ -409,7 +409,7 @@ export class UALJsDom {
           &#10006; I got it!
         </div>
         <p class="ual-infoExpanded">
-          This option allows you to connect to your favorite key manager app.
+          You must connect a WAX wallet in order to do more actions, withdraw BIT token and more. Sign up for a WCW at <a href="https://all-access.wax.io/" target="_blank">all-access.wax.io</a>
         </p>
       </div>
     `

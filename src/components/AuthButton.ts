@@ -29,7 +29,11 @@ export class AuthButton extends UALJsAbstractBaseComponent {
         margin: .7em auto;
         box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
         opacity: '1';
-        width: 260px;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
       }
 
       .ual-auth-icon {
