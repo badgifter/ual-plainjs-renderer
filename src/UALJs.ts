@@ -6,7 +6,6 @@ import { UALJsDom } from './UALJsDom'
  */
 export interface UALJsRenderConfig {
   containerElement: HTMLElement
-  buttonStyleOverride?: string
 }
 
 /**
@@ -76,15 +75,13 @@ export class UALJs extends UAL {
       }
 
       const {
-        containerElement,
-        buttonStyleOverride = false,
+        containerElement
       } = this.renderConfig as UALJsRenderConfig
 
       this.dom = new UALJsDom(
         this.loginUser,
         authenticators.availableAuthenticators,
-        containerElement,
-        buttonStyleOverride)
+        containerElement )
 
       this.dom!.generateUIDom()
     }
