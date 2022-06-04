@@ -19,6 +19,7 @@ type UserLoginCallback = (authenticator: Authenticator, accountName: string | un
 export class UALJsDom {
   private loginCallback: UserLoginCallback
   private containerElement: HTMLElement
+  private buttonStyleOverride: string | boolean
   private authenticators: Authenticator[]
   private authStateString: string = ''
 
@@ -33,16 +34,19 @@ export class UALJsDom {
    *
    * @param Authenticator[] Array of authenticators to show the user
    * @param HTMLElement Container element for all Authenticator UI elements
+   * @param buttonStyleOverride Allows the user to override the default styles of the auth start button
    * @stylePrefix Allows the user to override the prefix of class and id elements to avoid style conflicts
    */
   constructor(
     loginCallback: UserLoginCallback,
     authenticators: Authenticator[],
     containerElement: HTMLElement,
+    buttonStyleOverride: string | boolean = false,
   ) {
     this.loginCallback = loginCallback
     this.authenticators = authenticators
     this.containerElement = containerElement
+    this.buttonStyleOverride = buttonStyleOverride
   }
 
   /**
