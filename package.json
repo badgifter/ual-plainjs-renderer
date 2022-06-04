@@ -1,17 +1,18 @@
 {
-  "name": "@nefty/ual-renderer",
-  "version": "0.1.1",
+  "name": "@badgifter/ual-renderer",
+  "version": "0.2.1",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
   },
   "collaborators": [
     "Chris Allnutt",
-    "Mike Manfredi"
+    "Mike Manfredi",
+    "Bad Gifter"
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:EOSIO/ual-plainjs-renderer.git"
+    "url": "git@github.com:badgifter/ual-plainjs-renderer.git"
   },
   "main": "dist/index.js",
   "license": "MIT",
