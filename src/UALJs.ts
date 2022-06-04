@@ -75,7 +75,7 @@ export class UALJs extends UAL {
         throw new Error('Render Configuration is required when no auto login authenticator is provided')
       }
 
-      const {
+      const { 
         containerElement,
         buttonStyleOverride = false,
       } = this.renderConfig as UALJsRenderConfig

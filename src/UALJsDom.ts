@@ -110,10 +110,10 @@ export class UALJsDom {
     // so if state change occurs they redraw
     this.startRefreshAuthenticatorsTimeout()
 
-    // if (this.buttonStyleOverride) {
+    if (this.buttonStyleOverride) {
     //   const styleStr = typeof this.buttonStyleOverride === 'boolean' ? '' : this.buttonStyleOverride.toString()
     //   this.containerElement.appendChild(this.createButtonStyles(styleStr))
-    // }
+    }
   }
 
   /**
