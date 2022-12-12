@@ -294,13 +294,13 @@ export class UALJsDom {
       if (e instanceof UALError && e.type === UALErrorType.Login) {
         this.showMessage({
           title: `${authenticatorName} errored while logging in:`,
-          message: e.message,
+          message: e?.message||"Login Error",
           type: MessageTypes.ERROR
         })
       } else {
         this.showMessage({
           title: 'Login Error:',
-          message: e.message,
+          message: "Authentication Error",
           type: MessageTypes.ERROR
         })
       }
